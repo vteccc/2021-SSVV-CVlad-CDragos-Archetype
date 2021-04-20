@@ -40,4 +40,17 @@ public class SearchByKeywordStory {
     @Pending @Test
     public void searching_by_ambiguious_keyword_should_display_the_disambiguation_page() {
     }
+
+    @Test
+    public void searching_by_keyword_car() {
+        anna.is_the_home_page();
+        anna.looks_for("car");
+        anna.should_see_definition("A wheeled vehicle that moves independently, with at least three wheels, powered mechanically, steered by a driver and mostly for personal transportation.");
+    }
+    @Test
+    public void searching_by_keyword_horse() {
+        anna.is_the_home_page();
+        anna.looks_for("horse");
+        anna.should_see_definition("Any of several animals related to Equus ferus caballus.");
+    }
 } 
